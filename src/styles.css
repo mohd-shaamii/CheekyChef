@@ -1,0 +1,220 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Global styles */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Navbar styles */
+  nav {
+    background-color: #333;
+    color: rgb(197, 30, 30);
+    padding: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  /* Recipe card styles */
+  .recipe-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+  }
+  
+  .recipe-card img {
+    max-width: 100%;
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  form label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  form input,
+  form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  /* Add these styles to your CSS file */
+.edit-profile-button,
+.view-recipe-button,
+.edit-recipe-button {
+  background-color: #fca83a;
+  color: rgb(255, 255, 255);
+  padding: 7px 12px;
+  border: none;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.edit-profile-button:hover,
+.view-recipe-button:hover,
+.edit-recipe-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* styles.css */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.create-recipe {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.add-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.submit-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #0d8bf2;
+}
+
+/* Optional: Add more styles as needed */
+/* styles.css */
+/* ... (previous styles) */
+
+/* styles.css */
+/* ... (previous styles) */
+
+.delete-button {
+  background-color: #d42222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Optional: Add more styles as needed */
+/* styles.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #365D50;
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.profile-info {
+  text-align: center;
+  margin-right: 20px;
+}
+
+.chef-name {
+  font-size: 24px;
+  margin: 0;
+}
+
+.additional-info {
+  margin: 10px 0;
+}
+
+.edit-profile-button {
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.avatar {
+  height: 150px;
+}
+
+.profile-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
