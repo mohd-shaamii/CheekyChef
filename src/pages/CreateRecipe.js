@@ -1,12 +1,19 @@
 import React, { useState } from 'react';
 import '../styles.css'; // Import your CSS file
+import { Link } from 'react-router-dom';
+import RecipeDetailsPage from './RecipeDetailsPage';
+import RecipeDetails from '../components/RecipeDetails';
 
 const CreateRecipe = () => {
   const [recipe, setRecipe] = useState({
     title: '',
     ingredients: [{ id: 1, value: '' }],
     instructions: '',
+    cookingTime: '',
+    nutritionalInfo: '',
   });
+
+  const [showDetails, setShowDetails] = useState(false);
 
   const handleInputChange = event => {
     const { name, value } = event.target;
@@ -46,6 +53,10 @@ const CreateRecipe = () => {
     event.preventDefault();
     // Submit recipe to API
     // Example: submitRecipe(recipe);
+  };
+
+  const handleShowDetails = () => {
+    setShowDetails(true);
   };
 
   return (
@@ -99,12 +110,39 @@ const CreateRecipe = () => {
             />
           </div>
           <div className="form-group">
+            <label>Cooking Time (minutes):</label>
+            <input
+              type="number"
+              name="cookingTime"
+              value={recipe.cookingTime}
+              onChange={handleInputChange}
+              className="input-field"
+            />
+          </div>
+          <div className="form-group">
+            <label>Nutritional Information:</label>
+            <input
+              type="text"
+              name="nutritionalInfo"
+              value={recipe.nutritionalInfo}
+              onChange={handleInputChange}
+              className="input-field"
+            />
+          </div>
+          <div className="form-group">
             <button type="submit" className="submit-button">
               Create Recipe
             </button>
+          <Link type="submit" className="my" to="/RecipeDetailsPage">
+          Show All Details
+          </Link>
           </div>
         </form>
+        <div className="form-group">
+          {/* Add a link to the RecipeDetailsPage */}
+        </div>
       </div>
+      {showDetails && <RecipeDetails recipe={recipe} />}
     </div>
   );
 };

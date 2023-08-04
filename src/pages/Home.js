@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1>Featured Recipes</h1>
+      <h1>Still building!</h1>
       <div className="recipe-list">
         {recipes.map(recipe => (
           <RecipeCard key={recipe.id} recipe={recipe} />
