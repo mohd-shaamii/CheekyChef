@@ -2,14 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 
 const Navbar = () => {
   return (
-    <AppBar position="static" style={{ backgroundColor: "#d70f43" }}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: "#d70f43" }} // Use sx prop for inline styling
+    >
       <Toolbar
         style={{
           display: "flex",
@@ -17,12 +19,21 @@ const Navbar = () => {
           alignItems: "center",
         }}
       >
-        <h2 className="logo text-2xl font-bold lowercase italic">
-          Cheeky<span className="text-red-500">Chef</span>
-        </h2>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <h2 className="logo text-2xl font-bold lowercase italic">
+            Cheeky<span className="text-red-500">Chef</span>
+          </h2>
+        </Link>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          {/* Add Search Input */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "10px",
+            flex: 1,
+          }}
+        >
           <div style={{ position: "relative" }}>
             <div
               style={{
@@ -43,7 +54,6 @@ const Navbar = () => {
               }}
             />
           </div>
-          {/* End of Search Input */}
           <ul
             style={{
               listStyle: "none",
@@ -67,9 +77,21 @@ const Navbar = () => {
                 component={Link}
                 to="/profile"
                 variant="contained"
-                color="secondary"
+                color="primary"
               >
                 Profile
+              </Button>
+            </li>
+            <li>
+              <Button
+                className="login"
+                component={Link}
+                to="/login"
+                variant="contained"
+                color="primary"
+                sx={{ marginLeft: "11px" }} // Use sx prop for inline styling
+              >
+                Login
               </Button>
             </li>
           </ul>

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CreateRecipe from './pages/CreateRecipe';
 import UserProfile from './pages/UserProfile';
-import RecipeDetailsPage from './pages/RecipeDetailsPage'; // Import the new RecipeDetailsPage
+import LoginPage from './pages/LoginPage'; // Import the LoginPage component
 
 const App = () => {
   return (
@@ -14,8 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreateRecipe />} />
         <Route path="/profile" element={<UserProfile />} />
-        {/* Add a new route for RecipeDetailsPage */}
-        <Route path="/recipes/:id" element={<RecipeDetailsPage />} />
+        <Route path="/login" element={<LoginPage />} /> {/* Use the imported LoginPage component */}
       </Routes>
     </Router>
   );

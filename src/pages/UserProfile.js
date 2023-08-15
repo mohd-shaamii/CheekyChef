@@ -3,7 +3,7 @@ import "../styles.css"; // Import your CSS file
 
 const UserProfile = () => {
   return (
-    <div className="container" style={{ backgroundColor: 'white' }}>
+    <div className="container">
       <div className="profile-header">
         <div
           className="profile-info"

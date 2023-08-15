@@ -60,7 +60,7 @@ const CreateRecipe = () => {
   };
 
   return (
-    <div className="container" style={{ backgroundColor: '#365D50' }}>
+    <div className="container">
       <div className="create-recipe">
         <h1>Create a New Recipe</h1>
         <form className="create-form" onSubmit={handleFormSubmit}>
